@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<div id="main-container" style="display: none;">
+    <div class="container">
+        <h1>Conversor de monedas Nacional</h1>
+        <div class="hr-container">
+            <hr class="custom-hr">
+        </div>
+        <div class="cuadro">
+            <h2>Pesos CLP</h2>
+            <input
+                type="number"
+                name="form-control"
+                id="clp"
+                placeholder="Ingresa el valor CLP"
+                required
+            />
+            <h2>Moneda a convertir:</h2>
+            <select name="monedas" id="monedas">
+                <option value=""></option>
+                <option selected disabled value="">Selecione una moneda</option>
+            </select>
+            <br>
+            <br>
+            <button id="calcular">Calcular</button>
+            <p id="resultado"></p>
+        </div>
+        <h1 id="loading" style="display: none;">Cargando...</h1>
+        <div class="container-chart">
+            <div class="grafico" id="graficoContainer">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="sync-message" style="display: none;">
+  <h1>Sincronizando datos, por favor espera...</h1>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./assets/js/index.js"></script>
+</body>
+</html>
